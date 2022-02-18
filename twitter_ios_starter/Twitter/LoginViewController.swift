@@ -8,12 +8,20 @@
 
 import UIKit
 
+let user_logged_in = "userLoggedin"
+
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: user_logged_in) == true{
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+        }
     }
     // This action that reacts when someone clicks on it.
     @IBAction func onLoginButton(_ sender: Any) {
@@ -22,7 +30,10 @@ class LoginViewController: UIViewController {
         let myUrl = "https://api.twitter.com/oauth/request_token"
         // Provides url, success action, and fail action
         TwitterAPICaller.client?.login(url: myUrl, success: {
+            
+            UserDefaults.standard.set(true, forKey: "userLoggedin")
             self.performSegue(withIdentifier: "loginToHome", sender: self)
+            
         }, failure: { Error in
             print("Could not authenticate")
         })
