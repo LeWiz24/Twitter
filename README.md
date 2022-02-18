@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src= "./twitterwalk.gif" width='' alt='Video Walkthrough' />
+<img src= "./twitterwalk.gif" width=250><br>
