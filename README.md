@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src= "./walk.gif" width=250><br>
+<img src= "./walk10.gif" width=250><br>
 
 -----------------------------------------------------------------------------------------------------------------------
 
